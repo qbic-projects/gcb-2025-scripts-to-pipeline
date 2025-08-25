@@ -55,9 +55,3 @@ nf-core modules install ...
 5. Create a module for each of the scripts and call them in the subworkflow (you can use the [fasta2peptides module](https://github.com/nf-core/epitopeprediction) as an orientation)
 
 To understand how Python  scripts can be utilized you can check out the  [nf-core/epitopeprediction](github.com/nf-core/epitopeprediction) pipeline, e.g. the [fasta2peptides module](https://github.com/nf-core/epitopeprediction).
-
-```bash
-nf-core modules install ...
-```
-
-3. Integrate these scripts into a subworkflow called ...
