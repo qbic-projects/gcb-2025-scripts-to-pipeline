@@ -1,0 +1,7 @@
+name: gcb
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - bioconda::vcf2maf=1.6.22
+  - bioconda::bcftools=1.20
