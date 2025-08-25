@@ -46,7 +46,7 @@ nf-core modules install ...
 ## Step two: Utilize existing python scripts in your pipeline
 1. Try running the python scripts by following the advice in the README.
 
-2. Go to [Seqera Containers](https://seqera.io/containers/) and create your own Container with the required tools to run the scripts (see ```conda.yml```)
+2. Go to [Seqera Containers](https://seqera.io/containers/) and create your own Container with the required tools to run the scripts (see ```conda_py.yml```)
 
 3. Create a subworkflow called "py_scripts" in your pipeline (see above)
 
