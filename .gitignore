@@ -1,0 +1,6 @@
+# This gitignore file is tailored towards expected paths when you do what is described in the README files.
+bash/hg38.fa.gz
+bash/hg38.fa.gz.fai
+bash/hg38.fa.gz.gzi
+bash/mskcc-vcf2maf-f6d0c40
+bash/mskcc-vcf2maf.tar.gz
