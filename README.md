@@ -30,3 +30,20 @@ nf-core modules install ...
 3. Integrate these scripts into a subworkflow called ...
 
 ## Step two: Utilize existing python scripts in your pipeline
+1. Try running the python scripts by following the advice in the README.
+
+2. Go to [Seqera Containers](https://seqera.io/containers/) and create your own Container with the required tools to run the scripts (see ```conda.yml```)
+
+3. Create a subworkflow called "py_scripts" in your pipeline (see above)
+
+4. Copy the python scripts to the ``` bin ``` folder of the pipeline and make them executable
+
+5. Create a module for each of the scripts and call them in the subworkflow (you can use the [fasta2peptides module](https://github.com/nf-core/epitopeprediction) as an orientation)
+
+To understand how Python  scripts can be utilized you can check out the  [nf-core/epitopeprediction](github.com/nf-core/epitopeprediction) pipeline, e.g. the [fasta2peptides module](https://github.com/nf-core/epitopeprediction).
+
+```bash
+nf-core modules install ...
+```
+
+3. Integrate these scripts into a subworkflow called ...
