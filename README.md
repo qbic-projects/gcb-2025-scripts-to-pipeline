@@ -13,7 +13,9 @@ Our objective is to guide you through the process of transforming existing scrip
 
 ## Step zero: Create a new pipeline by using the nf-core template
 
-...
+```bash
+nf-core pipelines create
+```
 
 ## Step one: Transform bash scripts by utilizing nf-core modules
 
