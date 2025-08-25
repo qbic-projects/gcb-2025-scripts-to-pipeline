@@ -13,9 +13,23 @@ Our objective is to guide you through the process of transforming existing scrip
 
 ## Step zero: Create a new pipeline by using the nf-core template
 
+1. You need the [nf-core toolbox](https://nf-co.re/docs/nf-core-tools). 
+```bash
+conda create --name nf-core python=3.12 nf-core nextflow
+conda activate nf-core
+```
+
+2. Use the pipelines create command to create a new pipeline.
+Do this in a new and empty folder. The pipeline name can be anything, for example `gcbworkshop`.
 ```bash
 nf-core pipelines create
 ```
+
+3. Further steps.
+You will find a lot of TODO statements in the pipeline code. You do not need to worry about those for now. We will work on simple modules and subworkflows to help you understand the template a little more.
+
+> [!NOTE]
+> The nf-core documentation is a great source for recommendations and tricks. You can find a lot of answers [over there](https://nf-co.re/docs/guidelines/pipelines/overview). Anything Nextflow related can be looked up in the [Nextflow docs](www.nextflow.io/docs/latest/index.html).
 
 ## Step one: Transform bash scripts by utilizing nf-core modules
 
