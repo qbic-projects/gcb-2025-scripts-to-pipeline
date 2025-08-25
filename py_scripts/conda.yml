@@ -1,0 +1,11 @@
+name: gcb_py
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.13
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - cyvcf2
