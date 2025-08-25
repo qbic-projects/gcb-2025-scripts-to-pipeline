@@ -41,18 +41,18 @@ You will find a lot of TODO statements in the pipeline code. You do not need to 
 nf-core modules install ...
 ```
 
-3. Integrate these scripts into a subworkflow called `bash_scripts` in your pipeline.
+3. Integrate these scripts into a subworkflow called `bash_scripts.nf` in your pipeline.
 
 The modules we want to use here are very similar to their usage in the [qbic-pipelines/vcftomaf pipeline](https://github.com/qbic-pipelines/vcftomaf). You can refer to that pipeline if you get stuck but note that it has more functionality than what we are aiming for.
 
 ## Step two: Utilize existing python scripts in your pipeline
 1. Try running the python scripts by following the advice in the README.
 
-2. Go to [Seqera Containers](https://seqera.io/containers/) and create your own Container with the required tools to run the scripts (see ```conda_py.yml```)
+2. Go to [Seqera Containers](https://seqera.io/containers/) and create your own Container with the required tools to run the scripts (see `conda_py.yml`)
 
-3. Create a subworkflow called "py_scripts" in your pipeline (see above)
+3. Create a subworkflow called `py_scripts.nf` in your pipeline (see above)
 
-4. Copy the python scripts to the ``` bin ``` folder of the pipeline and make them executable
+4. Copy the python scripts to the `bin` folder of the pipeline and make them executable
 
 5. Create a module for each of the scripts and call them in the subworkflow (you can use the [fasta2peptides module](https://github.com/nf-core/epitopeprediction) as an orientation)
 
