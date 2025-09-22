@@ -1,0 +1,32 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/qbic-pipelines/vcftomaf/master/assets/schema_input.json",
+    "title": "qbic-pipelines/vcftomaf pipeline - params.input schema",
+    "description": "Schema for the file provided with params.input",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "sample": {
+                "type": "string",
+                "pattern": "^\\S+$",
+                "unique": true,
+                "errorMessage": "Unique sample name must be provided and cannot contain spaces",
+                "meta": ["id"]
+            },
+            "vcf": {
+                "type": "string",
+                "pattern": "^\\S+\\.vcf\\.gz$",
+                "errorMessage": "Input vcf file must be gzipped and have extenstion '.vcf.gz'",
+                "format": "file-path"
+            },
+            "index": {
+                "type": "string",
+                "pattern": "^\\S+\\.vcf\\.gz.tbi$",
+                "errorMessage": "Index file for vcf must have extension '.vcf.gz.tbi'",
+                "format": "file-path"
+            }
+        },
+        "uniqueItems": true
+    }
+}
