@@ -57,3 +57,21 @@ The modules we want to use here are very similar to their usage in the [qbic-pip
 5. Create a module for each of the scripts and call them in the subworkflow (you can use the [fasta2peptides module](https://github.com/nf-core/epitopeprediction) as an orientation)
 
 To understand how Python  scripts can be utilized you can check out the  [nf-core/epitopeprediction](github.com/nf-core/epitopeprediction) pipeline, e.g. the [fasta2peptides module](https://github.com/nf-core/epitopeprediction).
+
+## Common problems
+
+1. Wrong nf-core version.
+```bash
+pip install --upgrade nf-core
+````
+should upgrade to nf-core version > 3.0
+
+2. Java is missing
+```bash
+sdk install java 17.0.10-tem
+````
+needs to be added to your path aswell:
+```bash
+export JAVA_CMD="/home-link/paifb01/.sdkman/candidates/java/17.0.10-tem/bin/java"
+```
+replace `/home-link/paifb01/` with the path to your sdkman installation.
