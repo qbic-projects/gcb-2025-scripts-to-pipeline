@@ -15,6 +15,9 @@ Our objective is to guide you through the process of transforming existing scrip
 
 ### Step zero: Create a new pipeline by using the nf-core template
 
+> [!WARNING]
+> Do not use `_` in your pipeline or module names. They are only allowed in subworkflow names.
+
 1. You need the [nf-core toolbox](https://nf-co.re/docs/nf-core-tools). 
 ```bash
 conda create --name nf-core nf-core nextflow
@@ -38,6 +41,15 @@ You will find a lot of TODO statements in the pipeline code. You do not need to 
 #### Files you need to adapt
 
 If you work with out exemplary scripts you will need to adapt files in the `assets` folder of your pipeline. The adapted files are given under `files_to_change/assets`.
+
+### General structural ideas
+- modules: these hold process definitions
+- subworkflows: structural elements that help keep the `main.nf` short
+- workflows: this hold the main workflow in your nf-core template
+- main.nf: nextflow script file for each element (module, subworkflow, workflow)
+
+> [!NOTE]
+> You will only need to adapt the `main.nf` files in the created folder. Do not change the `main.nf` at the root of your pipeline folder.
 
 ### Step one: Transform bash scripts by utilizing nf-core modules
 
@@ -74,6 +86,15 @@ nf-core modules create
 This creates the files necessary for a new module within your pipeline. You can adapt those to your needs.
 
 To understand how Python  scripts can be utilized you can check out the  [nf-core/epitopeprediction](github.com/nf-core/epitopeprediction) pipeline, e.g. the [fasta2peptides module](https://github.com/nf-core/epitopeprediction).
+
+### Testing
+
+Include the created subworkflows in the `workflows/<name-of-your-workflow>.nf` script. Call them in the `main:` section.
+
+```bash
+nextflow run main.nf
+```
+This runs your pipeline. If all the include statements are correct it should at least start the pipeline (you will see that other stuff is missing, like the `--input` flag).
 
 ## Using nf-core pipelines
 
