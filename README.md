@@ -17,9 +17,11 @@ Our objective is to guide you through the process of transforming existing scrip
 
 1. You need the [nf-core toolbox](https://nf-co.re/docs/nf-core-tools). 
 ```bash
-conda create --name nf-core python=3.12 nf-core nextflow
+conda create --name nf-core nf-core nextflow
 conda activate nf-core
 ```
+
+You can also install the toolbox via pip `pip install nf-core`.
 
 2. Use the pipelines create command to create a new pipeline.
 Do this in a new and empty folder. The pipeline name can be anything, for example `gcbworkshop`.
