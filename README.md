@@ -11,7 +11,9 @@ Here we provide the materials for the workshop. You can find everything related 
 
 Our objective is to guide you through the process of transforming existing scripts into a working [nextflow](https://www.nextflow.io/) pipeline by utilizing [nf-core](https://nf-co.re/) components. 
 
-## Step zero: Create a new pipeline by using the nf-core template
+## Workshop: Create your own pipeline
+
+### Step zero: Create a new pipeline by using the nf-core template
 
 1. You need the [nf-core toolbox](https://nf-co.re/docs/nf-core-tools). 
 ```bash
@@ -31,7 +33,11 @@ You will find a lot of TODO statements in the pipeline code. You do not need to 
 > [!NOTE]
 > The nf-core documentation is a great source for recommendations and tricks. You can find a lot of answers [over there](https://nf-co.re/docs/guidelines/pipelines/overview). Anything Nextflow related can be looked up in the [Nextflow docs](www.nextflow.io/docs/latest/index.html).
 
-## Step one: Transform bash scripts by utilizing nf-core modules
+#### Files you need to adapt
+
+If you work with out exemplary scripts you will need to adapt files in the `assets` folder of your pipeline. The adapted files are given under `files_to_change/assets`.
+
+### Step one: Transform bash scripts by utilizing nf-core modules
 
 1. Try running the bash scripts by following the advice in the README.
 
@@ -49,7 +55,7 @@ nf-core subworkflows create
 ```
 This creates the files necessary for a new subworkflow within your pipeline. You can adapt those to your needs.
 
-## Step two: Utilize existing python scripts in your pipeline
+### Step two: Utilize existing python scripts in your pipeline
 1. Try running the python scripts by following the advice in the README.
 
 2. Go to [Seqera Containers](https://seqera.io/containers/) and create your own Container with the required tools to run the scripts (see `conda_py.yml`)
@@ -62,9 +68,9 @@ This creates the files necessary for a new subworkflow within your pipeline. You
 
 To understand how Python  scripts can be utilized you can check out the  [nf-core/epitopeprediction](github.com/nf-core/epitopeprediction) pipeline, e.g. the [fasta2peptides module](https://github.com/nf-core/epitopeprediction).
 
-## Other files you need to adapt
+## Using nf-core pipelines
 
-If you work with out exemplary scripts you will need to adapt files in the `assets` folder of your pipeline. The adapted files are given under `files_to_change/assets`.
+Many bioinformatics problems have a nf-core pipeline that you can use to run your own analysis. Feel free to check out [the nf-core website](https://nf-co.re/pipelines/) and search for keywords matching your data. You can then read the documentation and try to run the pipeline for your own analysis. If you get stuck you can always ask in the slack channel of the pipeline. You can join the slack [here](https://nf-co.re/join).
 
 ## Common problems
 
