@@ -41,7 +41,7 @@ If you work with out exemplary scripts you will need to adapt files in the `asse
 
 1. Try running the bash scripts by following the advice in the README.
 
-2. The provided bash scripts are available as [nf-core modules](https://nf-co.re/modules/). Look for them and install them to your pipeline with nf-core tools.
+2. The provided bash scripts are available as [nf-core modules](https://nf-co.re/modules/). Look for them and install them to your pipeline with nf-core tools. You can find the tool by having a look in the bash script or the provided conda environment.
 
 ```bash
 nf-core modules install ...
