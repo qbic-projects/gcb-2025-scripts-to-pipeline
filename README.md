@@ -42,9 +42,13 @@ You will find a lot of TODO statements in the pipeline code. You do not need to 
 
 If you work with out exemplary scripts you will need to adapt files in the `assets` folder of your pipeline. The adapted files are given under `files_to_change/assets`.
 
-### General structural ideas
+#### The nf-core template structure
 - modules: these hold process definitions
+    - local: modules you can create and adapt yourself
+    - nf-core: modules you can install with nf-core tools
 - subworkflows: structural elements that help keep the `main.nf` short
+    - local: subworkflows you can create and adapt yourself
+    - nf-core: subworkflows you can install with nf-core tools
 - workflows: this hold the main workflow in your nf-core template
 - main.nf: nextflow script file for each element (module, subworkflow, workflow)
 
