@@ -40,10 +40,14 @@ You will find a lot of TODO statements in the pipeline code. You do not need to 
 ```bash
 nf-core modules install ...
 ```
+The modules we want to use here are very similar to their usage in the [qbic-pipelines/vcftomaf pipeline](https://github.com/qbic-pipelines/vcftomaf). You can refer to that pipeline if you get stuck but note that it has more functionality than what we are aiming for.
 
 3. Integrate these scripts into a subworkflow called `bash_scripts.nf` in your pipeline.
 
-The modules we want to use here are very similar to their usage in the [qbic-pipelines/vcftomaf pipeline](https://github.com/qbic-pipelines/vcftomaf). You can refer to that pipeline if you get stuck but note that it has more functionality than what we are aiming for.
+```bash
+nf-core subworkflows create
+```
+This creates the files necessary for a new subworkflow within your pipeline. You can adapt those to your needs.
 
 ## Step two: Utilize existing python scripts in your pipeline
 1. Try running the python scripts by following the advice in the README.
@@ -57,6 +61,10 @@ The modules we want to use here are very similar to their usage in the [qbic-pip
 5. Create a module for each of the scripts and call them in the subworkflow (you can use the [fasta2peptides module](https://github.com/nf-core/epitopeprediction) as an orientation)
 
 To understand how Python  scripts can be utilized you can check out the  [nf-core/epitopeprediction](github.com/nf-core/epitopeprediction) pipeline, e.g. the [fasta2peptides module](https://github.com/nf-core/epitopeprediction).
+
+## Other files you need to adapt
+
+If you work with out exemplary scripts you will need to adapt files in the `assets` folder of your pipeline. The adapted files are given under `files_to_change/assets`.
 
 ## Common problems
 
